@@ -16,7 +16,7 @@ The project accompanies the submitted dissertation titled:
 
 ### Abstract 
  
-The repository provides all code, instructions, and additional materials required to reproduce the analyses presented in the dissertation.
+In recent years, the UK housing market has demonstrated notable nonlinear dynamics and structural changes, driven by a series of shocks including Brexit, the public health crisis, and a cycle of high inflation and interest rate hikes. Traditional econometric models, constrained by assumptions of linearity and stability, struggle to identify discontinuous changes in market conditions. The paper introduces a topological data analysis (TDA) framework, which is employed to construct a temporal trajectory of housing market structural complexity through multivariate and univariate embedding and sliding window persistent homology calculations. This study utilizes monthly data from London and Northwest England from 2009 to 2024 to investigate the disparities in uncertainty levels and shock response patterns between the two markets. London exhibits a phased-variable-dominated pattern, while the Northwest exhibits an overall synchronized response to national shocks. The findings indicate that the TDA persistent L₁ norm can function as an effective forward-looking indicator for identifying structural changes in the housing market and provide a quantitative basis for designing differentiated regional policies.
 
 ---
 
@@ -52,14 +52,14 @@ All code is provided in Jupyter Notebooks (`.ipynb`). It is recommended to run t
       
 2.  **`Section 3 Method Visualiaztion.ipynb`**:
     * **Purpose**: Method Visualization.
-    * **Description**: 
+
 
 3.  **`univariate lagged_London.ipynb` / `univariate lagged_NW.ipynb`**:
-    * **Purpose**: Core Model Implementation.
+    * **Purpose**: Univariate and joint embedding of single policy variables and housing prices point clouds Persistent Homology Analysis, Calculating Rolling Correlation
     * **Description**: 4.1 Housing price univariate lagged persistent homology; 4.3 Correlation Changes in Different Norm Periods(Calculating Rolling Correlation); 4.4 Regional Heterogeneity Analysis(joint embedding of single policy variables and housing prices)
 
 4.  **`Joint embedding PH-LD.ipynb` / `Joint embedding PH-NW.ipynb`**:
-    * **Purpose**: Core Model Implementation.
+    * **Purpose**: Joint embedding point cloud of all policy variables and lagged housing prices point clouds Persistent Homology Analysis.
     * **Description**: 4.2 Identification of market structure status combined with policy variables
     (joint embedding point cloud of all policy variables and lagged housing prices)
     * **Input**: 'London_Housing_Policy_Dataset_sd.csv','London_Housing_Policy_Dataset_sd.csv'
@@ -77,6 +77,8 @@ To run the code, you will need Python and the following main libraries. It is re
 * scikit-learn
 * matplotlib
 * seaborn
+* gudhi
+* tqdm
 
 To ensure reproducibility, you can generate a `requirements.txt` file by running the following command in your terminal and uploading it to this repository:
 ```bash
@@ -87,14 +89,22 @@ pip freeze > requirements.txt
 
 1.  Clone this repository to your local machine:
     ```bash
-    git clone [https://docs.github.com/en/get-started/using-github/connecting-to-github](https://docs.github.com/en/get-started/using-github/connecting-to-github)
+    git clone https://github.com/w1ldfire1/ERP-Leming-liu-2025.git
     ```
 2.  Navigate into the project directory:
     ```bash
-    cd [name-of-your-project-directory]
+    cd ERP-Leming-liu-2025
     ```
-3.  (Optional but recommended) Create and activate a virtual environment, then install the dependencies:
+3.  Create and activate a virtual environment, then install the dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 4.  Open Jupyter Notebook or Jupyter Lab and run the `.ipynb` files in the order suggested in the **Code Description** section.
+
+## Reproducibility Statement
+
+This repository is structured to ensure full reproducibility of the research, as per the guidelines of the MSc Data Science programme. The provided notebooks, when run in the suggested order, will regenerate all key figures, tables, and analytical results presented in the dissertation.
+
+## Contact
+
+For any questions regarding the code or the research project, please feel free to contact Leming Liu at [leming.liu@postgrad.manchester.ac.uk].
