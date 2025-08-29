@@ -21,20 +21,21 @@ In recent years, the UK housing market has demonstrated notable nonlinear dynami
 ---
 
 ## Repository Structure
-├── Joint embedding PH-LD.ipynb
-├── Joint embedding PH-NW.ipynb
-├── London_Housing_Policy_Dataset.csv
-├── London_Housing_Policy_Dataset_sd.csv
-├── North_West_Housing_Policy_Dataset.csv
-├── North_West_Housing_Policy_Dataset_sd.csv
-├── README.md
-├── Section 3 Method Visualiaztion.ipynb
-├── Sensitivity.ipynb
-├── norm-LD.csv
-├── norm-NW.csv
-├── preprocessing.ipynb
-├── univariate lagged_London.ipynb
-└── univariate lagged_NW.ipynb
+README.md
+requirements.txt
+London_Housing_Policy_Dataset.csv
+London_Housing_Policy_Dataset_sd.csv
+North_West_Housing_Policy_Dataset.csv
+North_West_Housing_Policy_Dataset_sd.csv
+preprocessing.ipynb
+EDA.ipynb
+Univariate and bivariate embedding-LD.ipynb
+Univariate and bivariate embedding-NW.ipynb
+Full multivariate embedding PH-LD.ipynb
+Full multivariate embedding PH-NW.ipynb
+norm-LD.csv
+norm-NW.csv
+Sensitivity.ipynb
 
 ## Datasets
 * `London_Housing_Policy_Dataset.csv`: [Original dataset of London]
@@ -50,16 +51,16 @@ All code is provided in Jupyter Notebooks (`.ipynb`). It is recommended to run t
     * **Input**: `London_Housing_Policy_Dataset.csv`, `North_West_Housing_Policy_Dataset.csv`
     * **Output**: 'London_Housing_Policy_Dataset_sd.csv','London_Housing_Policy_Dataset_sd.csv'
       
-2.  **`Section 3 Method Visualiaztion.ipynb`**:
-    * **Purpose**: Method Visualization.
+2.  **`EDA.ipynb`**:
+    * **Purpose**: Exploratory data analysis.
 
 
-3.  **`univariate lagged_London.ipynb` / `univariate lagged_NW.ipynb`**:
-    * **Purpose**: Univariate and joint embedding of single policy variables and housing prices point clouds Persistent Homology Analysis, Calculating Rolling Correlation
+3.  **`Univariate and bivariate embedding-London.ipynb` / `Univariate and bivariate embedding-NW.ipynb`**:
+    * **Purpose**: Univariate and bivariate embedding  point clouds Persistent Homology Analysis, Calculating Rolling Correlation
     * **Description**: 4.1 Housing price univariate lagged persistent homology; 4.3 Correlation Changes in Different Norm Periods(Calculating Rolling Correlation); 4.4 Regional Heterogeneity Analysis(joint embedding of single policy variables and housing prices)
 
-4.  **`Joint embedding PH-LD.ipynb` / `Joint embedding PH-NW.ipynb`**:
-    * **Purpose**: Joint embedding point cloud of all policy variables and lagged housing prices point clouds Persistent Homology Analysis.
+4.  **`Full multivariate embedding PH-LD.ipynb` / `JFull multivariate embedding PH-NW.ipynb`**:
+    * **Purpose**: Full multivariate embedding point clouds Persistent Homology Analysis.
     * **Description**: 4.2 Identification of market structure status combined with policy variables
     (joint embedding point cloud of all policy variables and lagged housing prices)
     * **Input**: 'London_Housing_Policy_Dataset_sd.csv','London_Housing_Policy_Dataset_sd.csv'
@@ -79,11 +80,6 @@ To run the code, you will need Python and the following main libraries. It is re
 * seaborn
 * gudhi
 * tqdm
-
-To ensure reproducibility, you can generate a `requirements.txt` file by running the following command in your terminal and uploading it to this repository:
-```bash
-pip freeze > requirements.txt
-```
 
 ### Steps
 
