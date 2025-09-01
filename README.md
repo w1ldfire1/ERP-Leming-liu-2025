@@ -38,8 +38,18 @@ norm-NW.csv
 Sensitivity.ipynb
 
 ## Datasets
-* `London_Housing_Policy_Dataset.csv`: [Original dataset of London]
-* `North_West_Housing_Policy_Dataset.csv`: [Original dataset of Northwest]
+Original data:
+Average Housing Prices： https://www.gov.uk/government/statistical-data-sets/uk-house-price-index-data-downloads-december-2024 
+Interest Rates：https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate
+Weekly Earnings ：https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/grossweeklyearningsoffulltimeemployeesbyregionearn05 
+Employment Rate ： https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/datasets/headlinelabourforcesurveyindicatorsforallregionshi00
+Benefit Caseload： https://www.gov.uk/government/collections/dwp-statistical-summaries 
+Housing Supply ：https://www.gov.uk/government/statistical-data-sets/live-tables-on-house-building
+Euro Rate ：https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/timeseries/thap/mret
+
+Processed data:
+* `London_Housing_Policy_Dataset.csv`: [Merged  dataset of London]
+* `North_West_Housing_Policy_Dataset.csv`: [Merged dataset of Northwest]
 * `London_Housing_Policy_Dataset_sd.csv`: [Standardized dataset of London]
 * `North_West_Housing_Policy_Dataset_sd.csv`: [Standardized dataset of Northwest]
 * `norm-LD.csv/norm-NW.csv`: [Persistent Norm of joint embedding point cloud of all policy variables and lagged housing prices]
